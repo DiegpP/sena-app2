@@ -42,18 +42,18 @@ public class Booking {
     @JoinColumn(name = "room_id")
     private Room room;
 
-    public void calculateTotalnumberOfGuest() {
+    public void calculateTotalNumberOfGuest() {
         this.totalNumOfGuest = this.numOfAdults + this.numOfChildren;
     }
 
     public void setNumOfAdults(int numOfAdults) {
         this.numOfAdults = numOfAdults;
-        calculateTotalnumberOfGuest();
+        calculateTotalNumberOfGuest();
     }
 
     public void setNumOfChildren(int numOfChildren) {
         this.numOfChildren = numOfChildren;
-        calculateTotalnumberOfGuest();
+        calculateTotalNumberOfGuest();
     }
 
     @Override

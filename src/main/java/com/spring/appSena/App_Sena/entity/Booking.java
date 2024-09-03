@@ -34,11 +34,11 @@ public class Booking {
     
     private String bookingConfirmationCode;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "room_id")
     private Room room;
 
@@ -65,7 +65,7 @@ public class Booking {
                 ", numOfAdults=" + numOfAdults +
                 ", numOfChildren=" + numOfChildren +
                 ", totalNumOfGuest=" + totalNumOfGuest +
-                ", bookingConfirmationCode='" + bookingConfirmationCode + '\'' +
+                ", roomType='" + bookingConfirmationCode + '\'' +
                 '}';
     }
 }
